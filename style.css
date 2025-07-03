@@ -12,7 +12,7 @@ body {
 #box {
   width: 100px;
   height: 100px;
-  background: #3498db;
+  background: linear-gradient(135deg, green, turquoise);
   position: absolute;
   top: 40%;
   left: 45%;
@@ -21,11 +21,23 @@ body {
 }
 
 button {
-  position: relative;
-  margin-top: 200px;
-  padding: 10px 20px;
+  background: linear-gradient(135deg, #b0b0b0 0%, #ffffff 100%);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
   font-size: 16px;
   font-family: inherit;
+  color: #222;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, transform 0.1s;
+  margin: 0 4px;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #888 0%, #e0e0e0 100%);
+  color: #111;
+  transform: translateY(-2px) scale(1.04);
 }
 
 .button-row {
@@ -38,13 +50,60 @@ button {
 }
 
 body.day-mode {
-  background: #fff;
+  background: linear-gradient(135deg, #fff9c4 0%, #ffd1dc 100%);
   color: #222;
   transition: background 0.3s, color 0.3s;
 }
 
 body.night-mode {
-  background: #111;
+  background: linear-gradient(135deg, #0a2342 0%, #2062b8 100%);
   color: #eee;
   transition: background 0.3s, color 0.3s;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-40px);
+  }
+  40% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-20px);
+  }
+  80% {
+    transform: translateY(0);
+  }
+}
+
+#box.spin {
+  animation: spin 1s linear infinite;
+}
+
+#box.bounce {
+  animation: bounce 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+}
+
+#box.smile::after {
+  content: "◡̈";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 2.5em;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  user-select: none;
 }
