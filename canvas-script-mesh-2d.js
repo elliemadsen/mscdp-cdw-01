@@ -143,4 +143,4 @@ var sketch2 = function spinningSpheresSketch(p) {
   };
 };
 
-var canvas2 = new p5(sketch2, "canvas-container-2");
+var canvas2 = new p5(sketch2, "canvas-container-mesh-2d");

@@ -12,7 +12,45 @@ body {
   font-family: "Courier New", Courier, monospace;
 }
 
-/* -------------------- button -------------------- */
+.main-content {
+  text-align: center;
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-size: 4em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  line-height: 1.2;
+  color: white;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-top: 0;
+  margin-bottom: 0.8em;
+  color: white;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 1.2em;
+  margin-top: 0;
+  color: white;
+  font-weight: normal;
+}
+
+p {
+  color: black;
+  margin-top: 50px;
+}
+
+/* -------------------- box -------------------- */
 
 #box {
   width: 100px;
@@ -113,43 +151,8 @@ body.night-mode {
   user-select: none;
 }
 
-/* -------------------- navbar -------------------- */
+/* spinning objects */
 
-/* Main Content Styling */
-.main-content {
-  text-align: center;
-  z-index: 1; /* Ensure text is above objects if they overlap */
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-h1 {
-  font-size: 4em;
-  margin-bottom: 0.5em;
-  font-weight: bold;
-  line-height: 1.2;
-  color: white;
-  font-weight: normal;
-}
-
-h2 {
-  font-size: 1.8em;
-  margin-top: 0;
-  margin-bottom: 0.8em;
-  color: white;
-  font-weight: normal;
-}
-
-h4 {
-  font-size: 1.2em;
-  margin-top: 0;
-  color: white;
-  font-weight: normal;
-}
-
-/* Object Containers */
 .object-container {
   position: absolute;
   cursor: pointer;
@@ -187,6 +190,8 @@ h4 {
   white-space: nowrap;
 }
 
+/* popup pages */
+
 .close-button {
   position: absolute;
   top: 15px;
@@ -223,12 +228,12 @@ h4 {
 
 .canvas-row-wrapper {
   display: flex;
-  flex-wrap: wrap; /* Allow canvases to wrap to the next line on smaller screens */
-  justify-content: center; /* Center canvases horizontally */
-  align-items: flex-start; /* Align canvases to the top of the row */
-  gap: 15px; /* Space between canvases */
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 15px;
   margin-top: 20px;
-  width: 100%; /* Take full width of parent popup-page-content */
-  overflow-x: auto; /* Allow horizontal scrolling if canvases don't fit */
-  padding-bottom: 10px; /* Padding for horizontal scrollbar */
+  width: 100%;
+  overflow-x: auto;
+  padding-bottom: 10px;
 }

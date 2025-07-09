@@ -6,16 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/npm/p5@1.9.0/lib/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
   </head>
   <body class="popup-page-body">
     <a href="index.html" class="popup-page-close-button">&times;</a>
 
+    <p>p5.js</p>
     <div class="canvas-row-wrapper">
-      <div id="canvas-container-1"></div>
-      <div id="canvas-container-2"></div>
+      <div id="canvas-container-balls-2d"></div>
+      <div id="canvas-container-mesh-2d"></div>
     </div>
 
-    <script src="canvas-script-01.js"></script>
-    <script src="canvas-script-02.js"></script>
+    <p>three.js</p>
+    <div class="canvas-row-wrapper">
+      <div id="canvas-container-balls-3d"></div>
+      <div id="canvas-container-mesh-3d"></div>
+    </div>
+
+    <script src="canvas-script-mesh-2d.js"></script>
+    <script src="canvas-script-balls-2d.js"></script>
+    <script src="canvas-script-mesh-3d.js"></script>
+    <script src="canvas-script-balls-3d.js"></script>
   </body>
 </html>

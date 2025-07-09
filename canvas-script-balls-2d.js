@@ -8,7 +8,7 @@ var sketch1 = function circlesSketch(p) {
   const MAX_RANDOM_SPEED = 0.3; // Slow random movement
   const DAMPING = 0.98; // Reduces speed over time
   const REPULSION_RADIUS = 150; // How far the mouse influence extends
-  const MAX_REPULSION_FORCE = 1; // Max force to push circles away
+  const MAX_REPULSION_FORCE = 0.2; // Max force to push circles away
 
   class Circle {
     constructor(x, y, r) {
@@ -68,17 +68,13 @@ var sketch1 = function circlesSketch(p) {
     display() {
       p.noStroke();
 
-      // Create a radial gradient for the fill
-      // Parameters: x0, y0, r0, x1, y1, r1
-      // x0, y0, r0: starting circle (center, radius 0)
-      // x1, y1, r1: ending circle (center, full radius)
       let gradient = p.drawingContext.createRadialGradient(
         this.x,
         this.y,
-        0, // Start gradient from the center with radius 0
+        0,
         this.x,
         this.y,
-        this.r // End gradient at the circle's edge with its full radius
+        this.r
       );
 
       // Add color stops for the gradient
@@ -96,12 +92,7 @@ var sketch1 = function circlesSketch(p) {
   }
 
   p.setup = function () {
-    let cnv = p.createCanvas(CANVAS_SZ, CANVAS_SZ);
-    // Attach the canvas to its parent container (if provided)
-    if (p.canvas.parentElement) {
-      // Check if parent is set during instantiation
-      cnv.parent(p.canvas.parentElement.id);
-    }
+    p.createCanvas(CANVAS_SZ, CANVAS_SZ);
     p.background(0);
 
     for (let i = 0; i < num_circles; i++) {
@@ -122,4 +113,4 @@ var sketch1 = function circlesSketch(p) {
   };
 };
 
-var canvas1 = new p5(sketch1, "canvas-container-1");
+var canvas1 = new p5(sketch1, "canvas-container-balls-2d");
