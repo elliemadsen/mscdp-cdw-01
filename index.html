@@ -2,19 +2,30 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>HelloWorld</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Computational Design Workflows</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
   </head>
   <body>
-    <div id="box"></div>
-    <div class="button-row">
-      <button id="modeBtn">Day</button>
-      <button id="moveBtn">Move</button>
-      <button id="colorBtn">Change Color</button>
-      <button id="spinBtn">Spin</button>
-      <button id="bounceBtn">Bounce</button>
-      <button id="helloBtn">Say Hello</button>
+    <div class="main-content">
+      <h1>
+        computational <br />
+        design <br />
+        workflows
+      </h1>
+      <h2>assignments</h2>
+      <h4>ellie madsen</h4>
     </div>
-    <script src="scripts.js"></script>
+
+    <div id="box-container" class="object-container">
+      <div class="object-label">02_vibe_code</div>
+    </div>
+    <div id="canvas-container" class="object-container">
+      <div class="object-label">03_spatial_canvas</div>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

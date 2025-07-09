@@ -16,7 +16,6 @@ document.getElementById("moveBtn").addEventListener("click", function () {
 
 document.getElementById("colorBtn").addEventListener("click", function () {
   const box = document.getElementById("box");
-  // Generate two random colors
   const color1 = `hsl(${Math.floor(Math.random() * 360)}, 70%, 60%)`;
   const color2 = `hsl(${Math.floor(Math.random() * 360)}, 70%, 60%)`;
   box.style.background = `linear-gradient(135deg, ${color1}, ${color2})`;
@@ -33,7 +32,6 @@ modeBtn.addEventListener("click", function () {
     document.body.classList.add("night-mode");
     modeBtn.textContent = "Day";
 
-    // Show "zzz" bubble
     const rect = box.getBoundingClientRect();
     const zzz = document.createElement("div");
     zzz.textContent = "💤";
@@ -77,10 +75,8 @@ document.getElementById("helloBtn").addEventListener("click", function () {
   const box = document.getElementById("box");
   box.classList.add("smile");
 
-  // Get box position
   const rect = box.getBoundingClientRect();
 
-  // Create speech bubble
   const speech = document.createElement("div");
   speech.textContent = "Hello!";
   speech.style.position = "fixed";

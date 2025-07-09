@@ -1,13 +1,18 @@
 body {
-  height: 100vh;
   margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  background: #f0f0f0;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
   font-family: "Courier New", Courier, monospace;
 }
+
+/* -------------------- button -------------------- */
 
 #box {
   width: 100px;
@@ -106,4 +111,124 @@ body.night-mode {
   transform: translate(-50%, -50%);
   pointer-events: none;
   user-select: none;
+}
+
+/* -------------------- navbar -------------------- */
+
+/* Main Content Styling */
+.main-content {
+  text-align: center;
+  z-index: 1; /* Ensure text is above objects if they overlap */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h1 {
+  font-size: 4em;
+  margin-bottom: 0.5em;
+  font-weight: bold;
+  line-height: 1.2;
+  color: white;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin-top: 0;
+  margin-bottom: 0.8em;
+  color: white;
+  font-weight: normal;
+}
+
+h4 {
+  font-size: 1.2em;
+  margin-top: 0;
+  color: white;
+  font-weight: normal;
+}
+
+/* Object Containers */
+.object-container {
+  position: absolute;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
+.object-container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
+}
+
+#box-container {
+  width: 150px;
+  height: 150px;
+}
+
+#canvas-container {
+  width: 120px;
+  height: 120px;
+}
+
+.object-label {
+  color: white;
+  font-size: 0.9em;
+  margin-top: 10px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 2em;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.close-button:hover {
+  color: #000;
+}
+
+.popup-page-body {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.popup-page-close-button {
+  position: absolute;
+  top: 15px;
+  right: 50px;
+  font-size: 4em;
+  cursor: pointer;
+  color: black;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.canvas-row-wrapper {
+  display: flex;
+  flex-wrap: wrap; /* Allow canvases to wrap to the next line on smaller screens */
+  justify-content: center; /* Center canvases horizontally */
+  align-items: flex-start; /* Align canvases to the top of the row */
+  gap: 15px; /* Space between canvases */
+  margin-top: 20px;
+  width: 100%; /* Take full width of parent popup-page-content */
+  overflow-x: auto; /* Allow horizontal scrolling if canvases don't fit */
+  padding-bottom: 10px; /* Padding for horizontal scrollbar */
 }
