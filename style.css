@@ -154,6 +154,8 @@ body.night-mode {
 /* spinning objects */
 
 .object-container {
+  width: 150px;
+  height: 150px;
   position: absolute;
   cursor: pointer;
   border-radius: 8px;
@@ -170,16 +172,6 @@ body.night-mode {
 .object-container:hover {
   transform: scale(1.05);
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.3);
-}
-
-#box-container {
-  width: 150px;
-  height: 150px;
-}
-
-#canvas-container {
-  width: 120px;
-  height: 120px;
 }
 
 .object-label {
@@ -236,4 +228,53 @@ body.night-mode {
   width: 100%;
   overflow-x: auto;
   padding-bottom: 10px;
+}
+
+/* BART d5.js chart */
+
+.chart-container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.legend-container {
+  overflow-y: scroll;
+  height: 500px;
+  width: 160px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.legend-title {
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 14px;
+  color: black;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+  font-size: 12px;
+  color: black;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  margin-right: 6px;
+  flex-shrink: 0;
+}
+.chart-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  color: black;
+  font-weight: lighter;
 }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>BART Streamgraph</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="popup-page-body">
+    <a href="index.html" class="popup-page-close-button">&times;</a>
+
+    <div class="chart-wrapper">
+      <div class="chart-container">
+        <svg id="streamgraph" width="960" height="500"></svg>
+        <div id="legend" class="legend-container">
+          <div class="legend-title">Stations</div>
+        </div>
+        <div
+          id="bart-tooltip"
+          style="
+            position: absolute;
+            display: none;
+            background: #fff;
+            border: 1px solid #333;
+            color: black;
+            padding: 6px;
+            font-size: 13px;
+            pointer-events: none;
+            z-index: 10;
+          "
+        ></div>
+      </div>
+
+      <p>
+        San Francisco Department of Technology: BART Daily Station Exits <br />
+        Retrieved from
+        <a
+          href="https://data.sfgov.org/Transportation/BART-Daily-Station-Exits/m2xz-p7ja"
+          target="_blank"
+          >data.sfgov.org/Transportation/BART-Daily-Station-Exits</a
+        >
+        <br />Built with d5.js
+      </p>
+    </div>
+    <script src="scripts/bart-riders-script.js"></script>
+  </body>
+</html>
