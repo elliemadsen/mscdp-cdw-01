@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Relational Structure Network</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="popup-page-body">
+    <a href="index.html" class="popup-page-close-button">&times;</a>
+
+    <div class="chart-wrapper">
+      <h2>Network of Artist Influences</h2>
+
+      <div
+        class="chart-container"
+        style="display: flex; flex-direction: column; align-items: center"
+      >
+        <svg
+          id="network-graph"
+          width="900"
+          height="600"
+          style="border: 2px solid #333; background: #fff"
+        ></svg>
+      </div>
+      <p>
+        Data source:
+        <a
+          href="https://query.wikidata.org/#SELECT%20%3Fsource%20%3FsourceLabel%20%3Ftarget%20%3FtargetLabel%20WHERE%20%7B%0A%20%20%3Fsource%20wdt%3AP737%20%3Ftarget.%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20influenced%20by%0A%20%20%3Fsource%20wdt%3AP106%20wd%3AQ42973.%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20artist%0A%20%20%3Ftarget%20wdt%3AP106%20wd%3AQ42973.%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%23%20artist%0A%20%20SERVICE%20wikibase%3Alabel%20%7B%20bd%3AserviceParam%20wikibase%3Alanguage%20%22en%22.%20%7D%0A%7D%0ALIMIT%20200%0A"
+          >Wikidata Query</a
+        >
+        <br />Built with d3.js
+      </p>
+    </div>
+    <script src="scripts/relational-structure.js"></script>
+  </body>
+</html>

@@ -1,6 +1,7 @@
 let vibeCodeContainer;
 let spatialCanvasContainer;
 let temporalStructureContainer;
+let relationalStructureContainer;
 
 // --- Initialization on DOM Content Loaded ---
 document.addEventListener("DOMContentLoaded", () => {
@@ -9,10 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
   temporalStructureContainer = document.getElementById(
     "temporal-structure-container"
   );
+  relationalStructureContainer = document.getElementById(
+    "relational-structure-container"
+  );
 
   initVibeCodeObj();
   initSpatialCanvasObj();
   initTemporalStructureObj();
+  initRelationalStructureObj();
   positionObjectsRandomly();
 
   vibeCodeContainer.addEventListener(
@@ -26,6 +31,10 @@ document.addEventListener("DOMContentLoaded", () => {
   temporalStructureContainer.addEventListener(
     "click",
     () => (window.location.href = "04_temporal_structure.html")
+  );
+  relationalStructureContainer.addEventListener(
+    "click",
+    () => (window.location.href = "05_relational_structure.html")
   );
 
   window.addEventListener("resize", positionObjectsRandomly);
@@ -57,6 +66,11 @@ function positionObjectsRandomly() {
       element: temporalStructureContainer,
       width: temporalStructureContainer.offsetWidth,
       height: temporalStructureContainer.offsetHeight,
+    },
+    {
+      element: relationalStructureContainer,
+      width: relationalStructureContainer.offsetWidth,
+      height: relationalStructureContainer.offsetHeight,
     },
   ];
 
@@ -276,6 +290,97 @@ function initTemporalStructureObj() {
     renderer.setSize(
       temporalStructureContainer.clientWidth,
       temporalStructureContainer.clientHeight
+    );
+  });
+}
+
+function initRelationalStructureObj() {
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(
+    75,
+    relationalStructureContainer.clientWidth /
+      relationalStructureContainer.clientHeight,
+    0.1,
+    1000
+  );
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  renderer.setSize(
+    relationalStructureContainer.clientWidth,
+    relationalStructureContainer.clientHeight
+  );
+  relationalStructureContainer.insertBefore(
+    renderer.domElement,
+    relationalStructureContainer.firstChild
+  );
+
+  // Define 6 nodes in 3D space (vertices of an octahedron for visual clarity)
+  const nodePositions = [
+    [1.2, 0, 0],
+    [-1.2, 0, 0],
+    [0, 1.2, 0],
+    [0, -1.2, 0],
+    [0, 0, 1.2],
+    [0, 0, -1.2],
+  ];
+
+  // Draw nodes (spheres)
+  const nodeGeometry = new THREE.SphereGeometry(0.13, 16, 16);
+  const nodeMaterial = new THREE.MeshBasicMaterial({
+    color: 0xffffff,
+    wireframe: true,
+  });
+  const nodeMeshes = [];
+  nodePositions.forEach((pos) => {
+    const mesh = new THREE.Mesh(nodeGeometry, nodeMaterial);
+    mesh.position.set(pos[0], pos[1], pos[2]);
+    scene.add(mesh);
+    nodeMeshes.push(mesh);
+  });
+
+  // Draw edges (octahedron edges)
+  const edgeMaterial = new THREE.LineBasicMaterial({ color: 0xffffff });
+  const edges = [
+    [0, 2],
+    [0, 3],
+    [0, 4],
+    [0, 5],
+    [1, 2],
+    [1, 3],
+    [1, 4],
+    [1, 5],
+    [2, 4],
+    [2, 5],
+    [3, 4],
+    [3, 5],
+  ];
+  edges.forEach(([a, b]) => {
+    const points = [
+      new THREE.Vector3(...nodePositions[a]),
+      new THREE.Vector3(...nodePositions[b]),
+    ];
+    const geometry = new THREE.BufferGeometry().setFromPoints(points);
+    const line = new THREE.Line(geometry, edgeMaterial);
+    scene.add(line);
+  });
+
+  camera.position.z = 4;
+
+  function animate() {
+    requestAnimationFrame(animate);
+    scene.rotation.y += 0.012;
+    scene.rotation.x += 0.009;
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  window.addEventListener("resize", () => {
+    camera.aspect =
+      relationalStructureContainer.clientWidth /
+      relationalStructureContainer.clientHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(
+      relationalStructureContainer.clientWidth,
+      relationalStructureContainer.clientHeight
     );
   });
 }

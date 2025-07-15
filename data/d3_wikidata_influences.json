@@ -1,0 +1,842 @@
+{
+  "nodes": [
+    {
+      "id": "Achille Castiglioni"
+    },
+    {
+      "id": "Agapito del Valle"
+    },
+    {
+      "id": "Aldo Rossi"
+    },
+    {
+      "id": "Alfred Werner Maurer"
+    },
+    {
+      "id": "Alfredo Wiechers Pieretti"
+    },
+    {
+      "id": "Antoni Gaudí"
+    },
+    {
+      "id": "Antoni Gilabert Fornés"
+    },
+    {
+      "id": "Antonin Nechodoma"
+    },
+    {
+      "id": "Antonio Canova"
+    },
+    {
+      "id": "August Font i Carreras"
+    },
+    {
+      "id": "Auguste Perret"
+    },
+    {
+      "id": "Baldassare Peruzzi"
+    },
+    {
+      "id": "Bernardo Rossellino"
+    },
+    {
+      "id": "Beth Chatto"
+    },
+    {
+      "id": "Bramantino"
+    },
+    {
+      "id": "Buckminster Fuller"
+    },
+    {
+      "id": "Carlo Scarpa"
+    },
+    {
+      "id": "Charles Holden"
+    },
+    {
+      "id": "Christian Frederik Hansen"
+    },
+    {
+      "id": "Christian Hansen"
+    },
+    {
+      "id": "Daniele Vitale"
+    },
+    {
+      "id": "David Gilly"
+    },
+    {
+      "id": "Donato Bramante"
+    },
+    {
+      "id": "Edmund Sedding"
+    },
+    {
+      "id": "Edmundo Tavares"
+    },
+    {
+      "id": "Edwin Lutyens"
+    },
+    {
+      "id": "Elies Rogent"
+    },
+    {
+      "id": "Elliott Barnes"
+    },
+    {
+      "id": "Enric Ruiz-Geli"
+    },
+    {
+      "id": "Enric Sagnier"
+    },
+    {
+      "id": "Eugène Viollet-le-Duc"
+    },
+    {
+      "id": "Ferdinand Boberg"
+    },
+    {
+      "id": "Filippo Brunelleschi"
+    },
+    {
+      "id": "Filippo Gnaccarini"
+    },
+    {
+      "id": "Flora Ruchat-Roncati"
+    },
+    {
+      "id": "Francesc Baldomar"
+    },
+    {
+      "id": "Francesco Borromini"
+    },
+    {
+      "id": "Francis Jourdain"
+    },
+    {
+      "id": "Frank Lloyd Wright"
+    },
+    {
+      "id": "František Krásný"
+    },
+    {
+      "id": "Frederick John Kiesler"
+    },
+    {
+      "id": "Fritz Haeg"
+    },
+    {
+      "id": "Gae Aulenti"
+    },
+    {
+      "id": "Gasim bey Hajibababeyov"
+    },
+    {
+      "id": "George Edmund Street"
+    },
+    {
+      "id": "Gerardo Cuadra"
+    },
+    {
+      "id": "Gerrit Rietveld"
+    },
+    {
+      "id": "Gertrude Jekyll"
+    },
+    {
+      "id": "Gesine Weinmiller"
+    },
+    {
+      "id": "Giacomo Barozzi da Vignola"
+    },
+    {
+      "id": "Giambologna"
+    },
+    {
+      "id": "Gianemilio Monti"
+    },
+    {
+      "id": "Giannino Castiglioni"
+    },
+    {
+      "id": "Giovanni Battista Caccini"
+    },
+    {
+      "id": "Giuseppe Terragni"
+    },
+    {
+      "id": "Hans Kollhoff"
+    },
+    {
+      "id": "Harold Chalton Bradshaw"
+    },
+    {
+      "id": "Hector Guimard"
+    },
+    {
+      "id": "Hendrick de Keyser"
+    },
+    {
+      "id": "Hendrik Petrus Berlage"
+    },
+    {
+      "id": "Huib Hoste"
+    },
+    {
+      "id": "Ignazio Gardella"
+    },
+    {
+      "id": "Imre Makovecz"
+    },
+    {
+      "id": "Isidre Puig Boada"
+    },
+    {
+      "id": "James Hoban"
+    },
+    {
+      "id": "Jan Kotěra"
+    },
+    {
+      "id": "Jaume Freixa"
+    },
+    {
+      "id": "Jean Welz"
+    },
+    {
+      "id": "Jean-Auguste-Dominique Ingres"
+    },
+    {
+      "id": "Jindřich Freiwald"
+    },
+    {
+      "id": "John Smythson"
+    },
+    {
+      "id": "Jordi Bonet i Armengol"
+    },
+    {
+      "id": "Jorge Segurado"
+    },
+    {
+      "id": "Josef Paul Kleihues"
+    },
+    {
+      "id": "Josep Lluís Sert"
+    },
+    {
+      "id": "Josep Puig i Cadafalch"
+    },
+    {
+      "id": "José Antonio Noguera Ros"
+    },
+    {
+      "id": "Julia Barfield"
+    },
+    {
+      "id": "Karl Friedrich Schinkel"
+    },
+    {
+      "id": "Karl von Hasenauer"
+    },
+    {
+      "id": "Kazuyo Sejima"
+    },
+    {
+      "id": "Le Corbusier"
+    },
+    {
+      "id": "Leonhard Gall"
+    },
+    {
+      "id": "Livio Castiglioni"
+    },
+    {
+      "id": "Lluís Bonet Garí"
+    },
+    {
+      "id": "Lluís Domènech i Montaner"
+    },
+    {
+      "id": "Lluís Muncunill i Parellada"
+    },
+    {
+      "id": "Lorenzo Ghiberti"
+    },
+    {
+      "id": "Louis Kahn"
+    },
+    {
+      "id": "Louis-Raymond Fischer"
+    },
+    {
+      "id": "Ludwig Mies van der Rohe"
+    },
+    {
+      "id": "Manuel Tolsá"
+    },
+    {
+      "id": "Mario Botta"
+    },
+    {
+      "id": "Massimo Vignelli"
+    },
+    {
+      "id": "Melozzo da Forlì"
+    },
+    {
+      "id": "Meshadi Mirza Qafar Ismayilov"
+    },
+    {
+      "id": "Michael Kuhn"
+    },
+    {
+      "id": "Michel Roux-Spitz"
+    },
+    {
+      "id": "Miroslav Spurný"
+    },
+    {
+      "id": "Morris Frederick Bell"
+    },
+    {
+      "id": "Nellie B. Allen"
+    },
+    {
+      "id": "Oscar Van de Voorde"
+    },
+    {
+      "id": "Otto Wagner"
+    },
+    {
+      "id": "Pace di Maso del Bombace"
+    },
+    {
+      "id": "Paolo Portoghesi"
+    },
+    {
+      "id": "Paul Laffoley"
+    },
+    {
+      "id": "Paul Troost"
+    },
+    {
+      "id": "Pedro Adolfo de Castro"
+    },
+    {
+      "id": "Pere Compte"
+    },
+    {
+      "id": "Phidias"
+    },
+    {
+      "id": "Pier Giacomo Castiglioni"
+    },
+    {
+      "id": "Rafael Braquehais"
+    },
+    {
+      "id": "Ragnar Östberg"
+    },
+    {
+      "id": "Raphael"
+    },
+    {
+      "id": "Raul Lino"
+    },
+    {
+      "id": "Rena Sakellaridou"
+    },
+    {
+      "id": "Richard Levine"
+    },
+    {
+      "id": "Robert Mills"
+    },
+    {
+      "id": "Rudolf Olgiati"
+    },
+    {
+      "id": "Rudolf Steiner"
+    },
+    {
+      "id": "Sigurd Frosterus"
+    },
+    {
+      "id": "Tertuliano Marques"
+    },
+    {
+      "id": "Thor Thorén"
+    },
+    {
+      "id": "Tobia Scarpa"
+    },
+    {
+      "id": "Tony Garnier"
+    },
+    {
+      "id": "Vicent Gascó i Massot"
+    },
+    {
+      "id": "Wendel Dietterlin"
+    },
+    {
+      "id": "Willem Danielsz van Tetrode"
+    },
+    {
+      "id": "Willem Marinus Dudok"
+    },
+    {
+      "id": "William Lincoln Garver"
+    },
+    {
+      "id": "William Morris"
+    },
+    {
+      "id": "Yves Lemoine"
+    }
+  ],
+  "links": [
+    {
+      "source": "Le Corbusier",
+      "target": "Mario Botta",
+      "type": "influenced"
+    },
+    {
+      "source": "Le Corbusier",
+      "target": "Paolo Portoghesi",
+      "type": "influenced"
+    },
+    {
+      "source": "Le Corbusier",
+      "target": "Jean Welz",
+      "type": "influenced"
+    },
+    {
+      "source": "Le Corbusier",
+      "target": "Miroslav Spurný",
+      "type": "influenced"
+    },
+    {
+      "source": "Le Corbusier",
+      "target": "Rena Sakellaridou",
+      "type": "influenced"
+    },
+    {
+      "source": "Antonio Canova",
+      "target": "Filippo Gnaccarini",
+      "type": "influenced"
+    },
+    {
+      "source": "Raphael",
+      "target": "Jean-Auguste-Dominique Ingres",
+      "type": "influenced"
+    },
+    {
+      "source": "Frank Lloyd Wright",
+      "target": "Louis-Raymond Fischer",
+      "type": "influenced"
+    },
+    {
+      "source": "Donato Bramante",
+      "target": "Bramantino",
+      "type": "influenced"
+    },
+    {
+      "source": "Antoni Gaudí",
+      "target": "Jordi Bonet i Armengol",
+      "type": "influenced"
+    },
+    {
+      "source": "Antoni Gaudí",
+      "target": "Isidre Puig Boada",
+      "type": "influenced"
+    },
+    {
+      "source": "Tony Garnier",
+      "target": "Michel Roux-Spitz",
+      "type": "influenced"
+    },
+    {
+      "source": "Ludwig Mies van der Rohe",
+      "target": "Elliott Barnes",
+      "type": "influenced"
+    },
+    {
+      "source": "Paul Troost",
+      "target": "Leonhard Gall",
+      "type": "influenced"
+    },
+    {
+      "source": "Hans Kollhoff",
+      "target": "Gesine Weinmiller",
+      "type": "influenced"
+    },
+    {
+      "source": "Rudolf Steiner",
+      "target": "Imre Makovecz",
+      "type": "influenced"
+    },
+    {
+      "source": "Otto Wagner",
+      "target": "Sigurd Frosterus",
+      "type": "influenced"
+    },
+    {
+      "source": "Otto Wagner",
+      "target": "František Krásný",
+      "type": "influenced"
+    },
+    {
+      "source": "Otto Wagner",
+      "target": "Oscar Van de Voorde",
+      "type": "influenced"
+    },
+    {
+      "source": "Karl von Hasenauer",
+      "target": "František Krásný",
+      "type": "influenced"
+    },
+    {
+      "source": "Josef Paul Kleihues",
+      "target": "Gesine Weinmiller",
+      "type": "influenced"
+    },
+    {
+      "source": "Buckminster Fuller",
+      "target": "Fritz Haeg",
+      "type": "influenced"
+    },
+    {
+      "source": "Buckminster Fuller",
+      "target": "Enric Ruiz-Geli",
+      "type": "influenced"
+    },
+    {
+      "source": "Buckminster Fuller",
+      "target": "Julia Barfield",
+      "type": "influenced"
+    },
+    {
+      "source": "Frederick John Kiesler",
+      "target": "Paul Laffoley",
+      "type": "influenced"
+    },
+    {
+      "source": "Mario Botta",
+      "target": "Rena Sakellaridou",
+      "type": "influenced"
+    },
+    {
+      "source": "Francesco Borromini",
+      "target": "Paolo Portoghesi",
+      "type": "influenced"
+    },
+    {
+      "source": "Carlo Scarpa",
+      "target": "Mario Botta",
+      "type": "influenced"
+    },
+    {
+      "source": "Carlo Scarpa",
+      "target": "Tobia Scarpa",
+      "type": "influenced"
+    },
+    {
+      "source": "Filippo Brunelleschi",
+      "target": "Bernardo Rossellino",
+      "type": "influenced"
+    },
+    {
+      "source": "Baldassare Peruzzi",
+      "target": "Giacomo Barozzi da Vignola",
+      "type": "influenced"
+    },
+    {
+      "source": "Phidias",
+      "target": "Antonio Canova",
+      "type": "influenced"
+    },
+    {
+      "source": "William Morris",
+      "target": "Francis Jourdain",
+      "type": "influenced"
+    },
+    {
+      "source": "Gerrit Rietveld",
+      "target": "Michael Kuhn",
+      "type": "influenced"
+    },
+    {
+      "source": "Achille Castiglioni",
+      "target": "Massimo Vignelli",
+      "type": "influenced"
+    },
+    {
+      "source": "Lorenzo Ghiberti",
+      "target": "Bernardo Rossellino",
+      "type": "influenced"
+    },
+    {
+      "source": "Louis Kahn",
+      "target": "Richard Levine",
+      "type": "influenced"
+    },
+    {
+      "source": "Giambologna",
+      "target": "Giovanni Battista Caccini",
+      "type": "influenced"
+    },
+    {
+      "source": "Kazuyo Sejima",
+      "target": "Rena Sakellaridou",
+      "type": "influenced"
+    },
+    {
+      "source": "Eugène Viollet-le-Duc",
+      "target": "Hector Guimard",
+      "type": "influenced"
+    },
+    {
+      "source": "Eugène Viollet-le-Duc",
+      "target": "Francis Jourdain",
+      "type": "influenced"
+    },
+    {
+      "source": "Wendel Dietterlin",
+      "target": "John Smythson",
+      "type": "influenced"
+    },
+    {
+      "source": "Melozzo da Forlì",
+      "target": "Pace di Maso del Bombace",
+      "type": "influenced"
+    },
+    {
+      "source": "Lluís Domènech i Montaner",
+      "target": "Josep Puig i Cadafalch",
+      "type": "influenced"
+    },
+    {
+      "source": "Lluís Domènech i Montaner",
+      "target": "Lluís Muncunill i Parellada",
+      "type": "influenced"
+    },
+    {
+      "source": "Hendrik Petrus Berlage",
+      "target": "Huib Hoste",
+      "type": "influenced"
+    },
+    {
+      "source": "Aldo Rossi",
+      "target": "Daniele Vitale",
+      "type": "influenced"
+    },
+    {
+      "source": "Enric Sagnier",
+      "target": "Alfredo Wiechers Pieretti",
+      "type": "influenced"
+    },
+    {
+      "source": "Edwin Lutyens",
+      "target": "Sigurd Frosterus",
+      "type": "influenced"
+    },
+    {
+      "source": "Edwin Lutyens",
+      "target": "Harold Chalton Bradshaw",
+      "type": "influenced"
+    },
+    {
+      "source": "Auguste Perret",
+      "target": "Michel Roux-Spitz",
+      "type": "influenced"
+    },
+    {
+      "source": "Auguste Perret",
+      "target": "Yves Lemoine",
+      "type": "influenced"
+    },
+    {
+      "source": "Jan Kotěra",
+      "target": "Jindřich Freiwald",
+      "type": "influenced"
+    },
+    {
+      "source": "Willem Marinus Dudok",
+      "target": "Charles Holden",
+      "type": "influenced"
+    },
+    {
+      "source": "Christian Frederik Hansen",
+      "target": "Christian Hansen",
+      "type": "influenced"
+    },
+    {
+      "source": "Elies Rogent",
+      "target": "Josep Puig i Cadafalch",
+      "type": "influenced"
+    },
+    {
+      "source": "David Gilly",
+      "target": "Karl Friedrich Schinkel",
+      "type": "influenced"
+    },
+    {
+      "source": "Gertrude Jekyll",
+      "target": "Beth Chatto",
+      "type": "influenced"
+    },
+    {
+      "source": "Gertrude Jekyll",
+      "target": "Nellie B. Allen",
+      "type": "influenced"
+    },
+    {
+      "source": "Giuseppe Terragni",
+      "target": "Gianemilio Monti",
+      "type": "influenced"
+    },
+    {
+      "source": "Josep Lluís Sert",
+      "target": "Jaume Freixa",
+      "type": "influenced"
+    },
+    {
+      "source": "James Hoban",
+      "target": "Robert Mills",
+      "type": "influenced"
+    },
+    {
+      "source": "Giannino Castiglioni",
+      "target": "Gae Aulenti",
+      "type": "influenced"
+    },
+    {
+      "source": "Giannino Castiglioni",
+      "target": "Achille Castiglioni",
+      "type": "influenced"
+    },
+    {
+      "source": "Giannino Castiglioni",
+      "target": "Pier Giacomo Castiglioni",
+      "type": "influenced"
+    },
+    {
+      "source": "Giannino Castiglioni",
+      "target": "Livio Castiglioni",
+      "type": "influenced"
+    },
+    {
+      "source": "Ignazio Gardella",
+      "target": "Daniele Vitale",
+      "type": "influenced"
+    },
+    {
+      "source": "Raul Lino",
+      "target": "Edmundo Tavares",
+      "type": "influenced"
+    },
+    {
+      "source": "August Font i Carreras",
+      "target": "Josep Puig i Cadafalch",
+      "type": "influenced"
+    },
+    {
+      "source": "Ragnar Östberg",
+      "target": "Sigurd Frosterus",
+      "type": "influenced"
+    },
+    {
+      "source": "Ferdinand Boberg",
+      "target": "Thor Thorén",
+      "type": "influenced"
+    },
+    {
+      "source": "Willem Danielsz van Tetrode",
+      "target": "Hendrick de Keyser",
+      "type": "influenced"
+    },
+    {
+      "source": "Rudolf Olgiati",
+      "target": "Alfred Werner Maurer",
+      "type": "influenced"
+    },
+    {
+      "source": "Flora Ruchat-Roncati",
+      "target": "Gesine Weinmiller",
+      "type": "influenced"
+    },
+    {
+      "source": "Pier Giacomo Castiglioni",
+      "target": "Massimo Vignelli",
+      "type": "influenced"
+    },
+    {
+      "source": "Gasim bey Hajibababeyov",
+      "target": "Meshadi Mirza Qafar Ismayilov",
+      "type": "influenced"
+    },
+    {
+      "source": "Antonin Nechodoma",
+      "target": "Pedro Adolfo de Castro",
+      "type": "influenced"
+    },
+    {
+      "source": "Lluís Bonet Garí",
+      "target": "Jordi Bonet i Armengol",
+      "type": "influenced"
+    },
+    {
+      "source": "George Edmund Street",
+      "target": "Edmund Sedding",
+      "type": "influenced"
+    },
+    {
+      "source": "Rafael Braquehais",
+      "target": "José Antonio Noguera Ros",
+      "type": "influenced"
+    },
+    {
+      "source": "Agapito del Valle",
+      "target": "Gerardo Cuadra",
+      "type": "influenced"
+    },
+    {
+      "source": "Louis Kahn",
+      "target": "Mario Botta",
+      "type": "influenced"
+    },
+    {
+      "source": "Antoni Gilabert Fornés",
+      "target": "Manuel Tolsá",
+      "type": "influenced"
+    },
+    {
+      "source": "Tertuliano Marques",
+      "target": "Jorge Segurado",
+      "type": "influenced"
+    },
+    {
+      "source": "Morris Frederick Bell",
+      "target": "William Lincoln Garver",
+      "type": "influenced"
+    },
+    {
+      "source": "Francesc Baldomar",
+      "target": "Pere Compte",
+      "type": "influenced"
+    },
+    {
+      "source": "Vicent Gascó i Massot",
+      "target": "Manuel Tolsá",
+      "type": "influenced"
+    },
+    {
+      "source": "Livio Castiglioni",
+      "target": "Massimo Vignelli",
+      "type": "influenced"
+    }
+  ]
+}
