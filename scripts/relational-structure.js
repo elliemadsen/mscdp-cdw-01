@@ -9,7 +9,8 @@ d3.json("data/d3_wikidata_influences.json").then((data) => {
     .attr("width", width)
     .attr("height", height)
     .style("display", "block")
-    .style("margin", `${margin}px auto`);
+    .style("margin", `${margin}px auto`)
+    .style("background", "#000");
 
   // arrow marker
   svg
@@ -20,13 +21,12 @@ d3.json("data/d3_wikidata_influences.json").then((data) => {
     .attr("refX", 22)
     .attr("refY", 0)
     .attr("orient", "auto")
-    .attr("markerWidth", 8)
-    .attr("markerHeight", 8)
+    .attr("markerWidth", 10)
+    .attr("markerHeight", 10)
     .attr("xoverflow", "visible")
     .append("svg:path")
     .attr("d", "M 0,-5 L 10,0 L 0,5")
-    .attr("fill", "#aaa")
-    .style("stroke", "none");
+    .attr("fill", "#7494a8");
 
   const container = svg.append("g");
 
@@ -55,8 +55,8 @@ d3.json("data/d3_wikidata_influences.json").then((data) => {
 
   const link = container
     .append("g")
-    .attr("stroke", "#aaa")
-    .attr("stroke-opacity", 0.7)
+    .attr("stroke", "#7494a8")
+    .attr("stroke-width", 1.5)
     .selectAll("line")
     .data(data.links)
     .join("line")
@@ -64,12 +64,12 @@ d3.json("data/d3_wikidata_influences.json").then((data) => {
 
   const node = container
     .append("g")
-    .attr("stroke", "#fff")
+    .attr("stroke", "#7494a8")
     .selectAll("circle")
     .data(data.nodes)
     .join("circle")
-    .attr("r", 8)
-    .attr("fill", "#3f83f8")
+    .attr("r", 16)
+    .attr("fill", "#bbdcfc")
     .call(drag(simulation));
 
   // Clickable labels to wikipedia
@@ -86,9 +86,9 @@ d3.json("data/d3_wikidata_influences.json").then((data) => {
     .append("text")
     .text((d) => d.label || d.id)
     .attr("font-size", 12)
-    .attr("dx", 12)
-    .attr("dy", "0.35em")
-    .attr("fill", "black")
+    .attr("dx", 20)
+    .attr("dy", 10)
+    .attr("fill", "white")
     .style("text-decoration", "none")
     .style("cursor", "pointer");
 
