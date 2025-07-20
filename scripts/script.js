@@ -2,6 +2,7 @@ let vibeCodeContainer;
 let spatialCanvasContainer;
 let temporalStructureContainer;
 let relationalStructureContainer;
+let geospatialStructureContainer;
 
 // --- Initialization on DOM Content Loaded ---
 document.addEventListener("DOMContentLoaded", () => {
@@ -13,11 +14,15 @@ document.addEventListener("DOMContentLoaded", () => {
   relationalStructureContainer = document.getElementById(
     "relational-structure-container"
   );
+  geospatialStructureContainer = document.getElementById(
+    "geospatial-structure-container"
+  );
 
   initVibeCodeObj();
   initSpatialCanvasObj();
   initTemporalStructureObj();
   initRelationalStructureObj();
+  initGeospatialStructureObj();
   positionObjectsRandomly();
 
   vibeCodeContainer.addEventListener(
@@ -36,7 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
     "click",
     () => (window.location.href = "05_relational_structure.html")
   );
-
+  geospatialStructureContainer.addEventListener(
+    "click",
+    () => (window.location.href = "06_geospatial_structure.html")
+  );
   window.addEventListener("resize", positionObjectsRandomly);
 });
 
@@ -71,6 +79,11 @@ function positionObjectsRandomly() {
       element: relationalStructureContainer,
       width: relationalStructureContainer.offsetWidth,
       height: relationalStructureContainer.offsetHeight,
+    },
+    {
+      element: geospatialStructureContainer,
+      width: geospatialStructureContainer.offsetWidth,
+      height: geospatialStructureContainer.offsetHeight,
     },
   ];
 
@@ -381,6 +394,81 @@ function initRelationalStructureObj() {
     renderer.setSize(
       relationalStructureContainer.clientWidth,
       relationalStructureContainer.clientHeight
+    );
+  });
+}
+
+function initGeospatialStructureObj() {
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(
+    75,
+    geospatialStructureContainer.clientWidth /
+      geospatialStructureContainer.clientHeight,
+    0.1,
+    1000
+  );
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  renderer.setSize(
+    geospatialStructureContainer.clientWidth,
+    geospatialStructureContainer.clientHeight
+  );
+  geospatialStructureContainer.insertBefore(
+    renderer.domElement,
+    geospatialStructureContainer.firstChild
+  );
+
+  const borderGeometry = new THREE.EdgesGeometry(new THREE.PlaneGeometry(2, 2));
+  const border = new THREE.LineSegments(
+    borderGeometry,
+    new THREE.LineBasicMaterial({ color: 0xffffff })
+  );
+  scene.add(border);
+
+  // Create a "blob" shape in the middle using a deformed circle
+  const blobShape = new THREE.Shape();
+  const points = [];
+  const blobRadius = 0.45;
+  const blobSegments = 32;
+  for (let i = 0; i <= blobSegments; i++) {
+    const angle = (i / blobSegments) * Math.PI * 2;
+    // Add some noise to the radius for a blobby effect
+    const noise = 0.13 * Math.sin(5 * angle + Math.cos(angle * 2));
+    const r = blobRadius + noise;
+    points.push(new THREE.Vector2(Math.cos(angle) * r, Math.sin(angle) * r));
+  }
+  blobShape.moveTo(points[0].x, points[0].y);
+  for (let i = 1; i < points.length; i++) {
+    blobShape.lineTo(points[i].x, points[i].y);
+  }
+  const blobGeometry = new THREE.ShapeGeometry(blobShape);
+  const blobMaterial = new THREE.MeshBasicMaterial({
+    color: 0xffffff,
+    transparent: true,
+    opacity: 0.7,
+    side: THREE.DoubleSide,
+  });
+  const blobMesh = new THREE.Mesh(blobGeometry, blobMaterial);
+  blobMesh.position.set(0, 0, 0.01); // Slightly above the plane
+  scene.add(blobMesh);
+
+  camera.position.z = 3;
+
+  function animate() {
+    requestAnimationFrame(animate);
+    scene.rotation.y += 0.012;
+    scene.rotation.x += 0.004;
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  window.addEventListener("resize", () => {
+    camera.aspect =
+      geospatialStructureContainer.clientWidth /
+      geospatialStructureContainer.clientHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(
+      geospatialStructureContainer.clientWidth,
+      geospatialStructureContainer.clientHeight
     );
   });
 }

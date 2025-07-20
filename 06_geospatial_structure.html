@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Geospatial Network</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🕳️</text></svg>"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="popup-page-body">
+    <a href="index.html" class="popup-page-close-button">&times;</a>
+    <div class="chart-wrapper">
+      <p>New York City Department of Parks & Recreation</p>
+      <h2>Directory of Basketball Courts</h2>
+      <div id="map"></div>
+      <p>
+        Data source:
+        <a
+          href="https://data.cityofnewyork.us/Recreation/Directory-of-Basketball-Courts/b937-zdky/about_data"
+          >NYC Open Data</a
+        >
+        <br />Built with Mapbox
+      </p>
+    </div>
+
+    <!-- Mapbox GL JS -->
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.15.0/mapbox-gl.js"></script>
+    <script>
+      mapboxgl.accessToken =
+        "pk.eyJ1IjoiZW00MDIwIiwiYSI6ImNtZDZ2dnFtZDBlNGkya3B1dnNtbGg5anEifQ.LY4KkznodYoTEhBH3kVYFg";
+
+      // Initialize the map
+      const map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/dark-v11",
+        center: [-73.95, 40.75],
+        zoom: 10,
+      });
+
+      // Load GeoJSON data
+      fetch("data/basketball_courts_geo.geojson")
+        .then((response) => response.json())
+        .then((data) => {
+          map.on("load", () => {
+            map.addSource("courts", {
+              type: "geojson",
+              data: data,
+            });
+            map.loadImage("data/basketball.png", (error, image) => {
+              if (error) throw error;
+              if (!map.hasImage("basketball_icon")) {
+                map.addImage("basketball_icon", image, { sdf: false });
+              }
+              map.addLayer({
+                id: "courts",
+                type: "symbol",
+                source: "courts",
+                layout: {
+                  "icon-image": "basketball_icon",
+                  "icon-size": 0.07,
+                  "icon-allow-overlap": true,
+                },
+              });
+
+              let popup;
+              map.on("mouseenter", "courts", (e) => {
+                map.getCanvas().style.cursor = "pointer";
+                const props = e.features[0].properties;
+                const html = `
+              <strong>${props.Name}</strong><br/>
+              ${props.Location}
+            `;
+                popup = new mapboxgl.Popup({
+                  closeButton: false,
+                  closeOnClick: false,
+                })
+                  .setLngLat(e.features[0].geometry.coordinates)
+                  .setHTML(html)
+                  .addTo(map);
+              });
+
+              map.on("mouseleave", "courts", () => {
+                map.getCanvas().style.cursor = "";
+                if (popup) {
+                  popup.remove();
+                  popup = null;
+                }
+              });
+            });
+          });
+        });
+    </script>
+  </body>
+</html>
