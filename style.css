@@ -293,3 +293,54 @@ a {
   width: 90%;
   height: 90%;
 }
+
+/* bunnies and flowers */
+
+#bunnies-container,
+#flowers-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 999;
+}
+
+#bunny-flower-buttons {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  align-items: center;
+}
+
+#bunny-flower-buttons button {
+  padding: 16px 28px;
+  font-size: 1em;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  background: black;
+  color: white;
+}
+
+#garden-counter {
+  position: fixed;
+  top: 24px;
+  left: 32px;
+  z-index: 2000;
+  padding: 16px 28px;
+  font-size: 1em;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+  background: black;
+  color: white;
+}

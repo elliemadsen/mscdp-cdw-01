@@ -3,6 +3,7 @@ let spatialCanvasContainer;
 let temporalStructureContainer;
 let relationalStructureContainer;
 let geospatialStructureContainer;
+let engagementContainer;
 
 // --- Initialization on DOM Content Loaded ---
 document.addEventListener("DOMContentLoaded", () => {
@@ -17,12 +18,14 @@ document.addEventListener("DOMContentLoaded", () => {
   geospatialStructureContainer = document.getElementById(
     "geospatial-structure-container"
   );
+  engagementContainer = document.getElementById("engagement-container");
 
   initVibeCodeObj();
   initSpatialCanvasObj();
   initTemporalStructureObj();
   initRelationalStructureObj();
   initGeospatialStructureObj();
+  initEngagementObj();
   positionObjectsRandomly();
 
   vibeCodeContainer.addEventListener(
@@ -44,6 +47,10 @@ document.addEventListener("DOMContentLoaded", () => {
   geospatialStructureContainer.addEventListener(
     "click",
     () => (window.location.href = "06_geospatial_structure.html")
+  );
+  engagementContainer.addEventListener(
+    "click",
+    () => (window.location.href = "07_engagement.html")
   );
   window.addEventListener("resize", positionObjectsRandomly);
 });
@@ -84,6 +91,11 @@ function positionObjectsRandomly() {
       element: geospatialStructureContainer,
       width: geospatialStructureContainer.offsetWidth,
       height: geospatialStructureContainer.offsetHeight,
+    },
+    {
+      element: engagementContainer,
+      width: engagementContainer.offsetWidth,
+      height: engagementContainer.offsetHeight,
     },
   ];
 
@@ -469,6 +481,101 @@ function initGeospatialStructureObj() {
     renderer.setSize(
       geospatialStructureContainer.clientWidth,
       geospatialStructureContainer.clientHeight
+    );
+  });
+}
+
+function initEngagementObj() {
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(
+    50,
+    engagementContainer.clientWidth / engagementContainer.clientHeight,
+    0.1,
+    1000
+  );
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  renderer.setSize(
+    engagementContainer.clientWidth,
+    engagementContainer.clientHeight
+  );
+  engagementContainer.insertBefore(
+    renderer.domElement,
+    engagementContainer.firstChild
+  );
+
+  function addWireFlower(x, y, scale = 1, petalCount = 6) {
+    const petalMaterial = new THREE.LineBasicMaterial({ color: 0xffffff });
+
+    const petalRadius = 0.19 * scale;
+    const petalLength = 0.22 * scale;
+    const petalWidth = 0.09 * scale;
+    for (let i = 0; i < petalCount; i++) {
+      const angle = (i / petalCount) * Math.PI * 2;
+      const petalCurve = [];
+      for (let j = 0; j <= 16; j++) {
+        const t = (j / 16) * Math.PI;
+        const px0 = Math.cos(t) * petalWidth;
+        const py0 = Math.sin(t) * petalLength + petalRadius;
+        const px = Math.cos(angle) * px0 - Math.sin(angle) * py0 + x;
+        const py = Math.sin(angle) * px0 + Math.cos(angle) * py0 + y;
+        petalCurve.push(new THREE.Vector3(px, py, 0));
+      }
+      for (let j = 16; j >= 0; j--) {
+        const t = (j / 16) * Math.PI;
+        const px0 = Math.cos(Math.PI - t) * petalWidth;
+        const py0 = Math.sin(Math.PI - t) * petalLength + petalRadius;
+        const px = Math.cos(angle) * px0 - Math.sin(angle) * py0 + x;
+        const py = Math.sin(angle) * px0 + Math.cos(angle) * py0 + y;
+        petalCurve.push(new THREE.Vector3(px, py, 0));
+      }
+      const petalGeometry = new THREE.BufferGeometry().setFromPoints(
+        petalCurve
+      );
+      const petalLine = new THREE.Line(petalGeometry, petalMaterial);
+      scene.add(petalLine);
+    }
+
+    const centerSteps = 32;
+    const centerRadius = 0.07 * scale;
+    const centerPoints = [];
+    for (let i = 0; i <= centerSteps; i++) {
+      const theta = (i / centerSteps) * Math.PI * 2;
+      centerPoints.push(
+        new THREE.Vector3(
+          x + Math.cos(theta) * centerRadius,
+          y + Math.sin(theta) * centerRadius,
+          0
+        )
+      );
+    }
+    const centerGeometry = new THREE.BufferGeometry().setFromPoints(
+      centerPoints
+    );
+    const centerCircle = new THREE.Line(centerGeometry, petalMaterial);
+    scene.add(centerCircle);
+  }
+
+  addWireFlower(-0.4, -0.4, 1, 6);
+  addWireFlower(-0.1, 0.2, 0.6, 6);
+  addWireFlower(0.4, 0.1, 0.5, 6);
+
+  camera.position.z = 2.5;
+
+  function animate() {
+    requestAnimationFrame(animate);
+    scene.rotation.y += 0.01;
+    scene.rotation.x += 0.004;
+    renderer.render(scene, camera);
+  }
+  animate();
+
+  window.addEventListener("resize", () => {
+    camera.aspect =
+      engagementContainer.clientWidth / engagementContainer.clientHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(
+      engagementContainer.clientWidth,
+      engagementContainer.clientHeight
     );
   });
 }
